@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Learn React Context API",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "Practice TypeScript",
+      "completed": true
+    },
+    {
+      "id": "3",
+      "title": "Build Todo List",
+      "completed": false
+    },
+    {
+      "id": "4",
+      "title": "Review React Hooks",
+      "completed": false
+    },
+    {
+      "id": "5",
+      "title": "Push project to GitHub",
+      "completed": true
+    },
+    {
+      "title": "buy new car",
+      "id": "2QCrGaTylhM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
