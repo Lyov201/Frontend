@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "Alice", "surname": "Johnson", "gender": "female", "salary": 4200 },
+  { "id": 2, "name": "Daniel", "surname": "Smith", "gender": "male", "salary": 5100 },
+  { "id": 3, "name": "Sophia", "surname": "Brown", "gender": "female", "salary": 4700 },
+  { "id": 4, "name": "Michael", "surname": "Davis", "gender": "male", "salary": 6200 },
+  { "id": 5, "name": "Emma", "surname": "Wilson", "gender": "female", "salary": 5400 },
+  { "id": 6, "name": "James", "surname": "Taylor", "gender": "male", "salary": 5800 },
+  { "id": 7, "name": "Olivia", "surname": "Anderson", "gender": "female", "salary": 4900 },
+  { "id": 8, "name": "William", "surname": "Thomas", "gender": "male", "salary": 6600 },
+  { "id": 9, "name": "Mia", "surname": "Martinez", "gender": "female", "salary": 5300 },
+  { "id": 10, "name": "Benjamin", "surname": "Garcia", "gender": "male", "salary": 7100 }
+]
