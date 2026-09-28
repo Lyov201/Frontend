@@ -5,9 +5,12 @@ import { useEffect, useState } from "react"
 import { User } from "../(lib)/types"
 import Link from "next/link";
 
+
+type EditUserForm = Omit<User, 'id'>
+
 export default function UsersPage() {
   const [users, setUsers] = useState<User[]>([]);
-
+ 
   useEffect(() => {
     axios
       .get<User[]>('/api/users')
@@ -57,6 +60,15 @@ export default function UsersPage() {
                 <strong className="text-2xl font-black text-slate-800">
                   ${user.salary}
                 </strong>
+
+
+                <Link
+
+                  href={`/users/${user.id}/edit`}
+                  className="text-blue-400 hover:underline ml-4"
+                >
+                Edit User
+                </Link>
               </div>
             </div>
           ))}
