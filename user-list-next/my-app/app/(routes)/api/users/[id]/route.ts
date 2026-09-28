@@ -25,7 +25,6 @@ export async function PATCH(
     { params }: { params: Promise<{ id: string }> }
 ) {
     const { id } = await params;
-     console.log("PATCH WORKING, ID:", id);
     const data = await request.json();
 
     await UserDB.update(data, {
@@ -35,5 +34,18 @@ export async function PATCH(
     return Response.json({
         message: "user updated"
     });
+}
 
+export async function DELETE (
+    request: Request,
+    {params} : {params: Promise<{id: string}>}
+) {
+    const {id} = await params;
+    await UserDB.destroy({
+        where: {id}
+    })
+
+    return Response.json({
+        message: "User deleted"
+    });
 }

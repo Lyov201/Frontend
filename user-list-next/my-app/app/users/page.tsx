@@ -6,11 +6,10 @@ import { User } from "../(lib)/types"
 import Link from "next/link";
 
 
-type EditUserForm = Omit<User, 'id'>
 
 export default function UsersPage() {
   const [users, setUsers] = useState<User[]>([]);
- 
+
   useEffect(() => {
     axios
       .get<User[]>('/api/users')
@@ -18,6 +17,12 @@ export default function UsersPage() {
         setUsers(response.data);
       })
   }, [])
+
+  const handleDelete = async (id: number) => {
+    setUsers(users.filter(user => user.id !== id));
+
+    await axios.delete(`/api/users/${id}`);
+  }
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-100 via-white to-pink-100 px-4 py-10">
@@ -67,8 +72,12 @@ export default function UsersPage() {
                   href={`/users/${user.id}/edit`}
                   className="text-blue-400 hover:underline ml-4"
                 >
-                Edit User
+                  Edit User
                 </Link>
+
+                <button className="ml-4 text-red-500 hover:underline"
+                onClick={() => handleDelete(user.id)}> Delete
+                 </button>
               </div>
             </div>
           ))}
